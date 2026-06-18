@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Up - O Seu Guia de Maquiagem</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fbf7f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4a373;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(255, 238, 230, 0.8), rgba(255, 238, 230, 0.6));
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #4a3b32;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #6b5b52;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            background-color: #d4a373;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #bfa07a;
+        }
+
+        /* Seção de Produtos */
+        .container {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #4a3b32;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #d4a373;
+            margin: 10px auto 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Representação visual dos produtos usando CSS puro */
+        .product-thumb {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            background-color: #fff1eb;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-info h3 {
+            color: #4a3b32;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .product-info p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Dicas Rápidas */
+        .tips-section {
+            background-color: #f3e9dc;
+            padding: 60px 5%;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #d4a373;
+        }
+
+        .tip-box h4 {
+            color: #4a3b32;
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #4a3b32;
+            color: white;
+            text-align: center;
+            padding: 30px 5%;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Glow Up</div>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#dicas">Dicas</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Realce Sua Beleza Natural</h1>
+        <p>Explore o universo da maquiagem e descubra os produtos essenciais para criar looks incríveis, do básico ao glamour.</p>
+        <a href="#produtos" class="btn">Ver Guia de Produtos</a>
+    </section>
+
+    <main class="container" id="produtos">
+        <h2 class="section-title">O Guia de Produtos</h2>
+        
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-thumb">🧴</div>
+                <div class="product-info">
+                    <h3>Base & Corretivo</h3>
+                    <p>A preparação da pele é tudo. A base uniformiza o tom do rosto, enquanto o corretivo disfarça olheiras e manchinhas com precisão.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-thumb">✨</div>
+                <div class="product-info">
+                    <h3>Pó & Iluminador</h3>
+                    <p>O pó compacto sela a maquiagem e controla a oleosidade. Já o iluminador traz pontos de luz estratégicos para aquele viço radiante.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-thumb">🌸</div>
+                <div class="product-info">
+                    <h3>Blush</h3>
+                    <p>Garante aquele aspecto saudável e corado nas maçãs do rosto. Disponível em texturas cremosas, em pó ou líquidas.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-thumb">👁️</div>
+                <div class="product-info">
+                    <h3>Rímel & Delineador</h3>
+                    <p>Destaque total para o olhar. O delineador define o contorno dos olhos e o rímel (máscara de cílios) traz volume e alongamento.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-thumb">💄</div>
+                <div class="product-info">
+                    <h3>Batom & Gloss</h3>
+                    <p>Cor e textura para os lábios. Escolha o acabamento matte para alta duração ou o gloss para um efeito molhado e volumoso.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-thumb">🖌️</div>
+                <div class="product-info">
+                    <h3>Pincéis & Acessórios</h3>
+                    <p>As ferramentas certas mudam o acabamento. Pincéis fofos para esfumar e esponjas úmidas dão o polimento perfeito à pele.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="tips-section" id="dicas">
+        <h2 class="section-title">Dicas de Aplicação</h2>
+        <div class="tips-container">
+            <div class="tip-box">
+                <h4>1. Hidratação Primeiro</h4>
+                <p>Nenhuma maquiagem fica bonita em pele ressecada. Hidrate bem o rosto antes de aplicar a base.</p>
+            </div>
+            <div class="tip-box">
+                <h4>2. Menos é Mais</h4>
+                <p>Construa camadas finas de corretivo e pó para evitar o efeito "craquelado".</p>
+            </div>
+            <div class="tip-box">
+                <h4>3. Esfume sem Medo</h4>
+                <p>O segredo de um blush ou sombra natural é a transição suave. Esfume bem as bordas com o pincel.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Glow Up. Desenvolvido com carinho para os amantes de beleza.</p>
+    </footer>
+
+</body>
+</html>
